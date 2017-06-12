@@ -4,8 +4,8 @@
 --------------------------------------------------------------------------------
 
 Maintainers:
- * Adedapo Ajuwon (dapseen), dapseen@gmail.com
- * Michael  (mikedeace),
+ * Michael  (@mikedeace),
+ * Adedapo Ajuwon (@dapseen), dapseen@gmail.com
 
 This module provides integration between Africas Talking SMS service and
 Drupal SMS framework project, allowing your drupal site to integrate
