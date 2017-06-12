@@ -1,0 +1,5 @@
+name = "Africas Talking  Gateway"
+description = "Africas talking Gateway built on Drupal SMS framework"
+package = SMS Framework
+dependencies[] = sms
+core = 7.x

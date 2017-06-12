@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Provides Africas talking SMS  implementation methods.
+ */
+
+/**
+ * Implements hook_gateway_info
+ *
+ */
+function africastalking_gateway_info(){
+    return array(
+        'africastalking' => array(
+            'name' => 'Africas Talking',
+            'send' => 'africastalking_send',
+            'receive' => TRUE,
+            'configure form' => 'africastalking_admin_form',
+            'send form' => 'africastalking_send_form',
+        ),
+    );
+
+}
+
+/**
+ * Implements hook_menu
+ */
+
+function africastalking_menu(){
+    $items = array();
+    $items['admin/smsframework/gateways/africas-talking']= array();
+
+    return $items;
+}
+
+/**
+ * Implements hook_permission
+ */
+function africastalking_permission(){
+    return array(
+        'administer africastalking' => array(
+            'title' => t('Administer africastalking'),
+            'description' => t('Africas talking configuration '),
+            'restrict access' => TRUE,
+        ),
+    );
+}
