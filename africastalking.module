@@ -28,7 +28,24 @@ function africastalking_gateway_info(){
 
 function africastalking_menu(){
     $items = array();
-    $items['admin/smsframework/gateways/africas-talking']= array();
+    $items['admin/smsframework/gateways/africas-talking']= array(
+        'title' => 'Africas Talking Configuration',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('africastalking_admin_form'),
+        'access arguments' => array('administer africastalking'),
+        'file' => 'africastalking.admin.inc',
+    );
+    $items['sms/africas-talking/inbox'] = array(
+        'title' => 'Africas Talking Received Messages',
+        'page callback' => 'africastalking_inbox_message',
+        'access arguments' => array('administer africastalking'),
+    );
+    //url to get details of sent messages
+    $items['sms/africas-talking/sent'] = array(
+        'title' => 'Africas Talking Sent Messages',
+        'page callback' => 'africastalking_sent_message',
+        'access arguments' => array('administer africastalking'),
+    );
 
     return $items;
 }
