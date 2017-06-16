@@ -62,3 +62,17 @@ function africastalking_permission(){
         ),
     );
 }
+
+/*
+ * Implements hook_send
+ * africas talking needs some variables to send message
+ * api_keys
+ * username
+ * recipients number
+ *
+ */
+function africastalking_send(){
+ $config =  array();
+  $config['africastalking_username'] = variable_get('africastalking_username');
+  $config['africastalking_api_keys'] = variable_get('africastalking_api_keys');
+}
